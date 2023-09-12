@@ -629,6 +629,7 @@ impl CloudId {
 /// on [Elasticsearch service in Elastic Cloud](https://www.elastic.co/cloud/).
 #[derive(Debug, Clone)]
 pub struct CloudConnectionPool {
+    #[allow(unused)]
     cloud_id: CloudId,
     connection: Connection,
 }

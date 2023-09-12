@@ -18,13 +18,6 @@
  */
 //! Certificate components
 
-use crate::error::Error;
-use std::{
-    io::{BufRead, BufReader, Cursor},
-    ops::Deref,
-    vec,
-};
-
 /// Validation applied to a SSL/TLS certificate, to establish a HTTPS connection.
 ///
 /// This requires the `native-tls`, or `rustls-tls` feature to be enabled. `native-tls` is
@@ -188,9 +181,11 @@ pub enum CertificateValidation {
 }
 
 /// Start marker for PEM encoded certificates.
+#[allow(unused)]
 const BEGIN_CERTIFICATE: &str = "-----BEGIN CERTIFICATE-----";
 
 /// End marker for PEM encoded certificates.
+#[allow(unused)]
 const END_CERTIFICATE: &str = "-----END CERTIFICATE-----";
 
 /// Represents a server X509 certificate chain.
