@@ -1,15 +1,19 @@
 [package]
-name = "elasticsearch"
+name = "elasticsearch_wasi"
 version = "8.6.0-alpha.1"
 edition = "2018"
 authors = ["Elastic and Contributors"]
-description = "Official Elasticsearch Rust client"
-repository = "https://github.com/elastic/elasticsearch-rs"
+description = "Official Elasticsearch Rust client for WASI and WasmEdge"
+repository = "https://github.com/WasmEdge/elasticsearch-rs-wasi/"
 keywords = ["elasticsearch", "elastic", "search", "lucene"]
 categories = ["api-bindings", "database"]
 documentation = "https://docs.rs/elasticsearch/"
 license = "Apache-2.0"
 readme = "../README.md"
+
+[lib]
+name = "elasticsearch"
+path = "src/lib.rs"
 
 [package.metadata.docs.rs]
 all-features = true
