@@ -1,2 +1,5 @@
 [alias]
 xtask = "run -q --package xtask --"
+
+[build]
+target="wasm32-wasi"
